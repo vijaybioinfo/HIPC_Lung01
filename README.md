@@ -49,7 +49,7 @@ Usage & Citation
 
 If you want to clone this repository run:
 ```bash
-git clone https://github.com/vijaybioinfo/PBT_2023.git
+git clone git@github.com:vijaybioinfo/BOOSTER_2025.git
 ```
 Please cite the following manuscript if you are using this repository:  
 To update upon publication.

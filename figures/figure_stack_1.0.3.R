@@ -13,7 +13,7 @@
 ### -------------------------- Description -------------------------- ###
 ############    -----------------------------------------    ############
 
-# Script to get all bioinformatics-based panel figures for any of the final main and supplementary figures for the paper for the HIPC Lung-1 project.
+# Script to get all bioinformatics-based panel figures for any of the final main and supplementary figures for the paper from the BOOST 1 project.
 
 
 
@@ -116,23 +116,23 @@ cell.type.cols <- c(
 # See definitions at: https://docs.google.com/spreadsheets/d/1_lNI4M7P-LBuwfQWEgag4pHaycMZMNcmzGv_k_e7x5U/edit#gid=0
 clusts.cols <- list(
   `b1.cd4`=c(
-    `0`='#319272', # TREG
-    `1`='#0000CD', # TH17
-    `2`='#D3B2CB', # Poly
-    `3`='#A6B0E3', # TFH
-    `4`='#00BFFF', # TCM/Naive
-    `5`='#FFB4B4', # TH2
-    `6`='#32CD32', # TFR
-    `7`='#676765' # Unknown
+    `0`='#00FF7F', # TREG
+    `1`='#FF7F00', # TH17 D
+    `2`='#E41A1C', # Poly D
+    `3`='#984EA3', # TFH D
+    `4`='#377EB8', # TCM/Naive D
+    `5`='#00FFFF', # TH2 D
+    `6`='#FFDD33', # TFR
+    `7`='#4B0082' # Unknown D
   ),
   `b1.cd8`=c(
-    `0`='#4DA6FF', # GZMKhi
-    `1`='#CC99FF', # exTEFF
-    `2`='#676765', # MAIT
-    `3`='#F2E6FF', # TEFF
-    `4`='#BFBFBF', # LTBhi
-    `5`='#EE82EE', # Naive/TCM
-    `6`='#FFD700' # IFNR
+    `0`='#FF1493', # GZMKhi D
+    `1`='#8B4513', # exTEFF D
+    `2`='#666666', # MAIT D
+    `3`='#D37A48', # TEFF D
+    `4`='#F781BF', # LTBhi D
+    `5`='#4DAF4A', # Naive/TCM D
+    `6`='#FF00FF' # IFNR D
   )
 )
 # @ Dose cohorts' colors
@@ -149,6 +149,7 @@ deg.class.cols <- c(
 )
 # @ Other terms' colors.
 signatures.col.scale <- c('#ffffff', '#ffffe0', '#ffffad', '#ffdf32', '#ff9a00', '#ff5a00', '#ff5719','#EE0000','#b30000', '#670000')
+alt.col.scale <- c('#ffdf32', '#ff9a00', '#ff5a00', '#ff5719','#EE0000','#b30000', '#670000')
 # @ Others.
 subset.n <- 50000
 # ---> Path definitions.
@@ -272,9 +273,6 @@ tmp.data <- Cells(srt.objs.list[[tmp.lab]])[
     !srt.objs.list[[tmp.lab]]@meta.data[, clust.labs[tmp.lab]] %in% clusts.to.rm
 ]
 srt.objs.list[[tmp.lab]] <- subset(x=srt.objs.list[[tmp.lab]], cells=tmp.data)
-# Remove cells beyond 7.5 on UMAP 1 scale.
-tmp.data <- Cells(srt.objs.list[[tmp.lab]])[!srt.objs.list[[tmp.lab]]@reductions$umap@cell.embeddings[, 'UMAP_1'] > 7.5]
-srt.objs.list[[tmp.lab]] <- subset(x=srt.objs.list[[tmp.lab]], cells=tmp.data)
 # Set populations as factors.
 srt.objs.list[[tmp.lab]]@meta.data[, clust.labs[tmp.lab]] <- factor(
     x=as.character(srt.objs.list[[tmp.lab]]@meta.data[, clust.labs[tmp.lab]]),
@@ -355,6 +353,46 @@ subset.list <- lapply(X=srt.objs.list, FUN=function(seurat.obj){
 
 # @ Total number of good-quality single-cell transcriptomes.
 meta.data[, .N]
+
+# @ Total number of good-quality single-cell transcriptomes per cell type.
+meta.data[, .N, by=gex.cell.type.tag]
+
+# @ Total number of samples
+meta.data[!is.na(exp.sample.id.tag), uniqueN(exp.sample.id.tag), by=gex.cell.type.tag][, sum(V1)]
+
+# @ Number of samples per cohort
+tmp.data.1 <- meta.data[
+    !is.na(dose.2.time.point.tag),
+    .(
+        cohort='dose.2',
+        sample.count=uniqueN(exp.sample.id.tag))
+    ,
+    by=(gex.cell.type.tag)
+]
+tmp.data.2 <- meta.data[
+    !is.na(dose.3.time.point.tag),
+    .(
+        cohort='dose.3',
+        sample.count=uniqueN(exp.sample.id.tag))
+    ,
+    by=(gex.cell.type.tag)
+]
+tmp.data.3 <- meta.data[
+    !is.na(dose.4.time.point.tag),
+    .(
+        cohort='dose.4',
+        sample.count=uniqueN(exp.sample.id.tag))
+    ,
+    by=(gex.cell.type.tag)
+]
+tmp.data <- list(
+    tmp.data.1,
+    tmp.data.2,
+    tmp.data.3
+)
+tmp.data <- rbindlist(l=tmp.data, use.names=T)
+tmp.data[, sum(sample.count)]
+
 
 # @ Median number of cells per sample for each T cell lineage.
 meta.data[,
@@ -508,6 +546,13 @@ main.obj.name <- 'b1.cd4'
 ### ------------------------- Text details -------------------------- ###
 
 # @ Fraction accounted for by representative subsets
+# Cluster 0
+tmp.vals <- c('0')
+meta.data[
+    data.set=='b1.cd4' & clusters.tag %in% tmp.vals
+    ,
+.N]/meta.data[data.set=='b1.cd4', .N]
+# Clusters 0, 1, 2 and 3.
 tmp.vals <- c('0', '1', '2', '3')
 meta.data[
     data.set=='b1.cd4' & clusters.tag %in% tmp.vals
@@ -570,7 +615,7 @@ tmp.data <- get.tag.analysis(
 tmp.data$index.tag <- factor(x=as.character(tmp.data$index.tag), levels=rev(c('dose.2', 'dose.3', 'dose.4')))
 # Plot
 tmp.ggplot <- ggplot(data=tmp.data, aes(x=cluster.tag, y=scl.abs.freq, fill=index.tag)) +
-    geom_bar(stat='identity', position='fill', width=0.6, color='black', linewidth=3) +
+    geom_bar(stat='identity', position='fill', width=0.6, color='black', linewidth=1.5) +
     scale_y_continuous(expand=expansion(add=c(0, 0)), breaks=scales::pretty_breaks(n=3)) +
     scale_fill_manual(values=cohort.cols) +
     labs(x='Cluster', y='Cell fraction', fill='Dose cohort')
@@ -611,7 +656,9 @@ tmp.height <- (length(these.markers) * 0.4) + 0.3
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_Markers_Opt-A')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd4.phen.path, file.name=tmp.lab, type='pdf', blank.comp=blank.complement.2, do.legend=TRUE,
-    width=tmp.width, height=tmp.height, legend.height=2.6, legend.width=0.5
+    width=tmp.width, height=tmp.height,
+    c.width=tmp.width+2, c.height=tmp.height,
+    legend.height=2.6, legend.width=0.5
 )
 
 # # ---> Expression of specific genes
@@ -624,7 +671,8 @@ scale.tholds <- c(
 )
 get.gene.exp.plots(
     seurat.obj=srt.objs.list[[main.obj.name]], 
-    genes.of.int=mods.of.int, scale.tholds=scale.tholds,
+    genes.of.int=genes.of.int, scale.tholds=scale.tholds,
+    col.scale=alt.col.scale,
     output.path=fig.cd4.phen.path, dot.size=1
 )
 
@@ -760,26 +808,41 @@ main.obj.name <- 'b1.cd8'
 ### ------------------------- Text details -------------------------- ###
 
 # @ Fraction accounted for by representative subsets
+# Cluster 0
 tmp.vals <- c('0')
 meta.data[
-    data.set==main.obj.name & clusters.tag %in% tmp.vals
+    data.set=='b1.cd4' & clusters.tag %in% tmp.vals
     ,
-.N]/meta.data[data.set==main.obj.name, .N]
+.N]/meta.data[data.set=='b1.cd8', .N]
 
 
 ### -------------------------- Main Figure -------------------------- ###
 
 # ---> UMAP plots depicting clusters.
+# @ Retrieve temporary object.
+tmp.obj <- srt.objs.list[[main.obj.name]]
+# Remove cells beyond 7.5 on UMAP 1 scale.
+tmp.data <- Cells(tmp.obj)[!tmp.obj@reductions$umap@cell.embeddings[, 'UMAP_1'] > 7.5]
+tmp.obj <- subset(x=tmp.obj, cells=tmp.data)
+# ---> Obtain cell subset of each dataset that's equal across cell types.
+tmp.subset <- sample(x=Cells(tmp.obj), size=subset.n)
+
 # @ Tiff versions
 # Whole dataset.
-tmp.ggplot <- get.umap.gg(obj.name=main.obj.name, attempted.format='tiff', cell.subset=NULL)
+tmp.ggplot <- get.umap.gg(
+    obj.name=main.obj.name, seurat.obj=tmp.obj,
+    attempted.format='tiff', cell.subset=NULL
+)
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_PopsOnUMAP_Whole')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd8.phen.path, file.name=tmp.lab, type='tiff',
     blank.comp=blank.complement.1, comp.comp=theme_classic(), do.legend=FALSE
 )
 # Subset
-tmp.ggplot <- get.umap.gg(obj.name=main.obj.name, attempted.format='tiff', cell.subset=subset.list[[main.obj.name]])
+tmp.ggplot <- get.umap.gg(
+    obj.name=main.obj.name, seurat.obj=tmp.obj,
+    attempted.format='tiff', cell.subset=tmp.subset
+)
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_PopsOnUMAP_Subset')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd8.phen.path, file.name=tmp.lab, type='tiff',
@@ -787,14 +850,20 @@ publish.plot(
 )
 # @ PDF versions
 # Whole dataset.
-tmp.ggplot <- get.umap.gg(obj.name=main.obj.name, attempted.format='pdf', cell.subset=NULL)
+tmp.ggplot <- get.umap.gg(
+    obj.name=main.obj.name, seurat.obj=tmp.obj,
+    attempted.format='pdf', cell.subset=NULL
+)
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_PopsOnUMAP_Whole')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd8.phen.path, file.name=tmp.lab, type='pdf',
     blank.comp=blank.complement.1, comp.comp=theme_classic(), do.legend=FALSE
 )
 # Subset
-tmp.ggplot <- get.umap.gg(obj.name=main.obj.name, attempted.format='pdf', cell.subset=subset.list[[main.obj.name]])
+tmp.ggplot <- get.umap.gg(
+    obj.name=main.obj.name, seurat.obj=tmp.obj,
+    attempted.format='pdf', cell.subset=tmp.subset
+)
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_PopsOnUMAP_Subset')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd8.phen.path, file.name=tmp.lab, type='pdf',
@@ -822,7 +891,7 @@ tmp.data <- get.tag.analysis(
 tmp.data$index.tag <- factor(x=as.character(tmp.data$index.tag), levels=rev(c('dose.2', 'dose.3', 'dose.4')))
 # Plot
 tmp.ggplot <- ggplot(data=tmp.data, aes(x=cluster.tag, y=scl.abs.freq, fill=index.tag)) +
-    geom_bar(stat='identity', position='fill', width=0.6, color='black', linewidth=3) +
+    geom_bar(stat='identity', position='fill', width=0.6, color='black', linewidth=1.5) +
     scale_y_continuous(expand=expansion(add=c(0, 0)), breaks=scales::pretty_breaks(n=3)) +
     scale_fill_manual(values=cohort.cols) +
     labs(x='Cluster', y='Cell fraction', fill='Dose cohort')
@@ -865,7 +934,9 @@ tmp.height <- (length(these.markers) * 0.4) + 0.3
 tmp.lab <- paste0(obj.extended.names[main.obj.name], '_Markers_Opt-A')
 publish.plot(
     tmp.ggplot=tmp.ggplot, output.path=fig.cd8.phen.path, file.name=tmp.lab, type='pdf', blank.comp=blank.complement.2, do.legend=TRUE,
-    width=tmp.width, height=tmp.height, legend.height=2.6, legend.width=0.5
+    width=tmp.width, height=tmp.height,
+    c.width=tmp.width+2, c.height=tmp.height,
+    legend.height=2.6, legend.width=0.5
 )
 
 # ---> Module scoring calculation (if necessary).
@@ -925,6 +996,26 @@ do.fgsea(
     tag.of.int='exhaust.tag',
     output.path=fig.cd8.phen.path, vals.to.depict='Exhausted', files.preffix=paste0(obj.extended.names[main.obj.name])
 )
+# @ Exhaustion signature, comparison between early and late timepoints for all cells.
+tmp.cells <- Cells(srt.objs.list[[main.obj.name]])[!is.na(srt.objs.list[[main.obj.name]]@meta.data[, 'evl.sample.tag'])]
+do.fgsea(
+    metrics.src=srt.objs.list[[main.obj.name]], modules.feats=modules.feats['exhaustion.consensus'],  metric='signal.to.noise',
+    cell.subset=tmp.cells,
+    tag.of.int='evl.sample.tag',
+    output.path=fig.cd8.phen.path, vals.to.depict='Late', files.preffix=paste0(obj.extended.names[main.obj.name])
+)
+# @ Exhaustion signature, comparison between early and late timepoints for all cells.
+tmp.cells <- Cells(srt.objs.list[[main.obj.name]])[
+    !is.na(srt.objs.list[[main.obj.name]]@meta.data[, 'evl.sample.tag']) &
+    srt.objs.list[[main.obj.name]]@meta.data[, clust.labs[[main.obj.name]]]=='1'
+]
+do.fgsea(
+    metrics.src=srt.objs.list[[main.obj.name]], modules.feats=modules.feats['exhaustion.consensus'],  metric='signal.to.noise',
+    cell.subset=tmp.cells,
+    tag.of.int='evl.sample.tag',
+    output.path=fig.cd8.phen.path, vals.to.depict='Late',
+    files.preffix=paste0(obj.extended.names[main.obj.name], '_C-1_')
+)
 
 # ---> Fraction of cells per cluster per donor.
 # tmp.ggplot <- get.cell.fracs.gg(
@@ -956,8 +1047,14 @@ main.obj.name <- NULL
 # @ Custom gene labels
 custom.gene.labs <- list(
     `CD4_Full_DEA_Comp-0-vs-1_Subset-C-3-DC-2`=c(
-        'CXCL13', 'IL2RA',
+        'CXCL13', 'IL2RA', 'CXCR5',
         'IL2', 'CD200')
+)
+# @ Custom P-value bounds.
+custom.p.bounds <- c(
+    `CD4_Full_DEA_Comp-0-vs-1_Subset-C-3-DC-2`=200,
+    `CD4_Full_DEA_Comp-CD4REpos-vs-CD4REneg_Subset-C-1`=70,
+    `CD8_Full_DEA_Comp-CD4REpos-vs-CD4REneg_Subset-C-0-4-6`=70
 )
 
 # @ Process per test
@@ -978,14 +1075,28 @@ for(test.id in names(dea.res)){
     )]
     # LFC bound
     lfc.bound <- tmp.data[abs(lfc)>1, floor(quantile(x=abs(lfc), probs=0.99))]
+    if(is.na(lfc.bound)) lfc.bound <- tmp.data[, round(x=max(abs(lfc)), digits=2)]
     tmp.data[lfc<=(-lfc.bound), lfc:=-lfc.bound]
     tmp.data[lfc>=(lfc.bound), lfc:=lfc.bound]
-    # lfc.bound <- tmp.data[, max(abs(lfc))]
     # P-value bound
     tmp.data[, log.p:=-log10(p.adj)]
     tmp.data[is.infinite(log.p), log.p:=tmp.data[!is.infinite(log.p), max(log.p)]]
-    p.bound <- tmp.data[, floor(quantile(x=log.p, probs=0.99))]
+    if(test.id %in% names(custom.p.bounds)){
+        p.bound <- custom.p.bounds[test.id]
+    }else{
+        p.bound <- tmp.data[, floor(quantile(x=log.p, probs=0.99))]
+    }
     tmp.data[log.p>=p.bound, log.p:=p.bound]
+    # DEG annotations
+    setorderv(x=tmp.data, cols=c('p.adj', 'lfc'), order=c(1, -1))
+    gen.genes <- tmp.data[1:16, gene.id]
+    if(test.id %in% names(custom.gene.labs)){
+        custom.genes <- unique(c(gen.genes, custom.gene.labs[[test.id]]))
+    }else{
+        custom.genes <- gen.genes
+    }
+    custom.genes <- data.table(gene.id=custom.genes)
+    custom.genes <- merge(x=custom.genes, y=tmp.data, by='gene.id')
     # Plot.
     y.bound <- floor(log10(p.bound));
     if(y.bound==0) y.bound <- 0.5
@@ -1008,15 +1119,13 @@ for(test.id in names(dea.res)){
         scale_fill_manual(values=deg.class.cols) +
         labs(x='LFC', y='-log10(adj. P-value)') +
         theme(legend.position='none')
-    if(test.id %in% names(custom.gene.labs)){
-        custom.genes <- data.table(gene.id=custom.gene.labs[[test.id]])
-        custom.genes <- merge(x=custom.genes, y=tmp.data, by='gene.id')
-    }else{
-        custom.genes <- NULL
-    }
     tmp.lab <- test.id
     publish.plot(
         tmp.ggplot=tmp.ggplot, output.path=fig.dea.path, file.name=tmp.lab, type='pdf', blank.comp=blank.complement.3, do.legend=FALSE,
         repel.data=custom.genes, repel.label='gene.id'
     ) 
+    # DEG class summary
+    tmp.data <- tmp.data[, .(gene.count=.N), by=deg.class]
+    tmp.file.name <- paste0(fig.dea.path, '/', tmp.lab, '_DEGSumm.csv')
+    fwrite(file=tmp.file.name, x=tmp.data)
 }

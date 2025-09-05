@@ -1,12 +1,14 @@
-# Evolution of T cell responses as a function of multiple COVID-19 boosters
+# The human lung is a reservoir of tissue-resident memory T cells against a broad spectrum of pathogens
 ------------
 
 Description
 ------------
 
-The long-term effects of repeated COVID-19 vaccinations on adaptive immunity remain incompletely understood. Here, we conducted a comprehensive three-year longitudinal study examining T cell and antibody responses in 68 vaccinated individuals without reported symptomatic infections. We observed distinct dynamics in humoral and cellular immune responses across multiple vaccine doses. While antibody titers incrementally increased and stabilized with each booster, T cell responses rapidly plateaued, maintaining remarkable stability across CD4+ and CD8+ subsets. Notably, approximately 30% of participants showed CD4+ T cell reactivity to non-Spike antigens, consistent with asymptomatic infections. Single-cell RNA sequencing revealed a diverse landscape of Spike-specific T cell phenotypes, with no evidence of increased exhaustion or significant functional impairment. However, qualitative changes were observed in individuals with evidence of asymptomatic infection, exhibiting unique immunological characteristics, including increased frequencies of Th17-like CD4+ T cells and GZMKhi/IFNR-like CD8+ T cell subsets. Remarkably, repeated vaccinations in this group were associated with a progressive increase in regulatory T cells, potentially indicating a balanced immune response that may mitigate immunopathology. By stimulating T cell memory, boosters contribute to a stable and enhanced immune response, which may provide better protection against symptomatic infections.
+Repo for our manuscript titled as above. This repository self-contains some and links to other repos with further scripts used to process and analyze the data produced in our study. We also provide the code we wrote to produce the associated figures and tables.
 
-This repository contains the data and scripts used to analyze the scRNA-seq data produced in our study and produce some of the associated figures shown on our manuscript.
+### Summary
+Immune responses in the lung are essential for preventing and controlling a wide range of infections. Tissue-resident memory T (TRM) cells are critical for frontline immunity—yet in the murine lung they undergo rapid attrition to preserve gas exchange, accumulating in the draining lymph nodes (LLN) for resupply through retrograde migration. Whether this paradigm applies to humans is currently unknown. Here, we present the first comprehensive analysis of T cells from human lung and its LLN, defining the prevalence and properties of lung TRM cells specific to a broad spectrum of pathogens. Using a T-cell receptor (TCR)-guided approach that integrates single-cell transcriptomics with paired TCR repertoire profiling, we mapped the pathogen-specificity of over 87,000 lung T cells from 40 individuals, the majority of whom harbored TRM cell populations specific to multiple viruses. Thus, in contrast to mice, the human lung itself serves as a reservoir of clonally-expanded TRM cells specific to a broad spectrum of pathogens. Although the LLN contained a small population of TRM cells, over 80% of the TCRs from highly expanded TRM clones in the lung were absent in the LLN, suggesting that they do not serve as the major reservoir for lung TRM cells. We also found that the prevalence and properties of pathogen-specific lung TRM cells are influenced more strongly by donor-intrinsic factors than pathogen identity. This suggests that the design of effective vaccines targeting airborne pathogens needs to account for host-intrinsic variability in the generation and maintenance of tissue-resident memory cells. Overall, our findings reveal that the human lung retains a stable and diverse pool of pathogen-specific TRM cells, suggesting that strategies to bolster these responses could provide durable protection against severe lung infections.
+
 
 Requirements
 ------------
@@ -22,7 +24,7 @@ Raw data
 ------------
 * The single-cell RNA-seq raw and processed files from our study can be downloaded via GEO with accession number to be provided soon.
 
-Raw data processing  
+Raw data processing
 ------------
 
 ### Single-cell
@@ -49,7 +51,7 @@ Usage & Citation
 
 If you want to clone this repository run:
 ```bash
-git clone git@github.com:vijaybioinfo/BOOSTER_2025.git
+git clone https://github.com/vijaybioinfo/HIPC_Lung01.git
 ```
 Please cite the following manuscript if you are using this repository:  
 To update upon publication.

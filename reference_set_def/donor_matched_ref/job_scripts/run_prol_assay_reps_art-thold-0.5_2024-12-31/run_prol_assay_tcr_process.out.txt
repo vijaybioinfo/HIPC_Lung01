@@ -1,0 +1,464 @@
+
+
+############    ------   Prolif. assay TCR data    -------    ############
+############    -----------   QC and prep.    ------------    ############
+
+
+### -------------------------- Dependencies ------------------------- ###
+
+
+### --------------------------- Arguments --------------------------- ###
+
+
+### --------------------------- Load data --------------------------- ###
+### ---------------------- & data preprocessing --------------------- ###
+
+
+### ---------------------- Data preprocessing ----------------------- ###
+### ----------------------- of bulk TCR data ------------------------ ###
+    peptide.pool     N
+          <char> <int>
+ 1:        SPIKE   114
+ 2:           PI    90
+ 3:         PERT     2
+ 4:          MPV    72
+ 5:          ASP    57
+ 6:          RSV   103
+ 7:         CMV8    82
+ 8:         CMV4   131
+ 9:          EBV    74
+10:           RH    14
+11:           HA    88
+12:           PT    16
+13:        RHINO     8
+14:     PERTUSIS    10
+15:           PR    22
+16:          FLU     8
+       peptide.pool     N
+             <char> <int>
+ 1:      SARS-CoV-2   114
+ 2:             PIV    90
+ 3: B-pertussis-Vax    50
+ 4:             MPV    72
+ 5:     Aspergillus    57
+ 6:             RSV   103
+ 7:            CMV8    82
+ 8:            CMV4   131
+ 9:             EBV    74
+10:              RV    22
+11:             IAV    96
+
+
+### --------------------- Load sample-based data -------------------- ###
+
+
+### ---------------------- Artifact detection ----------------------- ###
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+
+
+### ----------------- Antigen specificity definition ---------------- ###
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+
+
+### ------------------ Processed sample-based data ------------------ ###
+
+
+### --------------------- Clonotype-based info ---------------------- ###
+
+
+### ---------------------- General exploration ---------------------- ###
+null device 
+          1 
+null device 
+          1 
+
+
+### -------------- Assay validation based on controls --------------- ###
+cdr3.nt.seq 
+TCRA 
+TCRB 
+End of process for this chain.
+
+
+
+
+### ---------------- Sample misassignment correction ---------------- ###
+### ----------------------- External strategy ----------------------- ###
+cdr3.nt.seq 
+CD4 
+TCRA 
+L001 
+L005 
+L006 
+L007 
+L008 
+L009 
+L010 
+L016 
+L017 
+L018 
+L022 
+L028 
+L031 
+L033 
+L034 
+L035 
+L037 
+L038 
+L039 
+L040 
+L002 
+L020 
+L026 
+L021 
+L036 
+L014 
+L003 
+L027 
+L030 
+L004 
+L025 
+L024 
+L029 
+L012 
+L013 
+L019 
+TCRB 
+L001 
+L002 
+L003 
+L005 
+L007 
+L009 
+L016 
+L017 
+L019 
+L020 
+L021 
+L025 
+L014 
+L004 
+L006 
+L008 
+L010 
+L012 
+L013 
+L018 
+L024 
+L026 
+L022 
+L038 
+L033 
+L037 
+L034 
+L035 
+L039 
+L029 
+L030 
+L036 
+L031 
+L040 
+L027 
+L028 
+CD8 
+TCRA 
+L003 
+L008 
+L009 
+L013 
+L018 
+L022 
+L026 
+L029 
+L033 
+L036 
+L004 
+L020 
+L024 
+L035 
+L040 
+L016 
+L017 
+L037 
+L030 
+L034 
+L039 
+L010 
+L028 
+L027 
+L007 
+L025 
+L001 
+L005 
+L012 
+L021 
+L002 
+L031 
+L014 
+TCRB 
+L003 
+L005 
+L007 
+L008 
+L009 
+L012 
+L013 
+L014 
+L017 
+L022 
+L024 
+L026 
+L002 
+L010 
+L018 
+L028 
+L034 
+L036 
+L039 
+L040 
+L004 
+L016 
+L020 
+L027 
+L021 
+L037 
+L025 
+L033 
+L029 
+L035 
+L001 
+L030 
+L031 
+cdr3.aa.seq 
+CD4 
+TCRA 
+L001 
+L005 
+L006 
+L007 
+L008 
+L009 
+L010 
+L016 
+L017 
+L018 
+L022 
+L028 
+L031 
+L033 
+L034 
+L035 
+L037 
+L038 
+L039 
+L040 
+L002 
+L020 
+L026 
+L021 
+L036 
+L014 
+L003 
+L027 
+L030 
+L004 
+L025 
+L024 
+L029 
+L012 
+L013 
+L019 
+TCRB 
+L001 
+L002 
+L003 
+L005 
+L007 
+L009 
+L016 
+L017 
+L019 
+L020 
+L021 
+L025 
+L014 
+L004 
+L006 
+L008 
+L010 
+L012 
+L013 
+L018 
+L024 
+L026 
+L022 
+L038 
+L033 
+L037 
+L034 
+L035 
+L039 
+L029 
+L030 
+L036 
+L031 
+L040 
+L027 
+L028 
+CD8 
+TCRA 
+L003 
+L008 
+L009 
+L013 
+L018 
+L022 
+L026 
+L029 
+L033 
+L036 
+L004 
+L020 
+L024 
+L035 
+L040 
+L016 
+L017 
+L037 
+L030 
+L034 
+L039 
+L010 
+L028 
+L027 
+L007 
+L025 
+L001 
+L005 
+L012 
+L021 
+L002 
+L031 
+L014 
+TCRB 
+L003 
+L005 
+L007 
+L008 
+L009 
+L012 
+L013 
+L014 
+L017 
+L022 
+L024 
+L026 
+L002 
+L010 
+L018 
+L028 
+L034 
+L036 
+L039 
+L040 
+L004 
+L016 
+L020 
+L027 
+L021 
+L037 
+L025 
+L033 
+L029 
+L035 
+L001 
+L030 
+L031 
+
+
+### ---------------- Sample misassignment correction ---------------- ###
+### ----------------------- Internal strategy ----------------------- ###
+NV137 
+cdr3.nt.seq 
+CD4 
+TCRA 
+TCRB 
+CD8 
+TCRA 
+TCRB 
+End of process for this run.
+
+
+NV132 
+cdr3.nt.seq 
+CD4 
+TCRA 
+TCRB 
+CD8 
+TCRA 
+TCRB 
+End of process for this run.
+
+
+NV135 
+cdr3.nt.seq 
+CD4 
+TCRA 
+TCRB 
+CD8 
+TCRA 
+TCRB 
+End of process for this run.
+
+
+
+
+### --------------------------------- END -------------------------------- ###
+R version 4.2.2 (2022-10-31)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Rocky Linux 8.6 (Green Obsidian)
+
+Matrix products: default
+BLAS:   /root/hpc-apps/R/4.2.2/lib64/R/lib/libRblas.so
+LAPACK: /root/hpc-apps/R/4.2.2/lib64/R/lib/libRlapack.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] parallel  stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] UpSetR_1.4.0      pheatmap_1.0.12   ggplot2_3.5.0     stringr_1.5.1    
+[5] tidyr_1.3.1       data.table_1.15.2 optparse_1.7.3   
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.12        pillar_1.9.0       compiler_4.2.2     RColorBrewer_1.1-3
+ [5] plyr_1.8.9         tools_4.2.2        lifecycle_1.0.4    tibble_3.2.1      
+ [9] gtable_0.3.4       pkgconfig_2.0.3    rlang_1.1.3        cli_3.6.2         
+[13] gridExtra_2.3      lsa_0.73.3         withr_3.0.0        dplyr_1.1.4       
+[17] generics_0.1.3     vctrs_0.6.5        gtools_3.9.4       grid_4.2.2        
+[21] getopt_1.20.4      tidyselect_1.2.1   glue_1.7.0         R6_2.5.1          
+[25] fansi_1.0.6        purrr_1.0.2        farver_2.1.1       magrittr_2.0.3    
+[29] SnowballC_0.7.1    scales_1.3.0       colorspace_2.1-0   labeling_0.4.3    
+[33] utf8_1.2.4         stringi_1.8.3      munsell_0.5.0     
+PROGRAM FINISHED!
+

@@ -1,14 +1,16 @@
-Single-cell RNA-seq ("transcriptome") data.
+Transcriptome data from single-cell RNA-seq.
 ===========
 
 This process was applied to each aggregated dataset, one for lung CD3+ T cells and one for LLN CD3+ T cells. This section comprises the following major steps:
 
 * Preprocessing of reads by mapping them to the reference genome and collapsing them into UMI count matrices (10x's cellranger)
-* Donor deconvolution based on hashtag oligos (HTOs) and based on genetic variants (Demuxlet; depends on the output from the section above).
+* Donor deconvolution based on hashtag oligonucleotide (HTO) data.
+* Quality control (QC).
+* Data normalization and batch effect removal.
 * Clustering and dimensionality reduction.
 * Population definition based on differential expression analysis and manual assignment of T cell subsets.
 
-The first step is described in the methods section of our manuscript in detail. Here we provide the code for the rest of the steps.
+The first step is described in the methods section of our manuscript in detail. The second step is described in `./../hto_data` in this repo. Here we provide the code for the rest of the steps.
 
 ---
 # Scripts and job scripts
@@ -35,4 +37,6 @@ allows for up to 300 GB in RAM (with as many processors as there might be availa
 
 ---
 # Data requirements
-To obtain the raw data for the results presented in our study, you must download it from our GEO submission (to be provided). The input for this section is the aggregated gene by cell UMI count matrix for each aggregated dataset, namely: lung and LLN CD3+ T cells.
+To obtain the raw data for the results presented in our study, you must download it from our GEO submission (to be provided). The input for this section is, among other files, the following:
+* The aggregated gene by cell UMI count matrix for each aggregated dataset, namely: lung and LLN CD3+ T cells. 
+* Cell-wise donor assignments—output from the HTO data preprocessing steps, as described in `./../hto_data` in this repo.

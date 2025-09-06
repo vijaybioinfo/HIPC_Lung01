@@ -1,0 +1,68 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+Normalizing across features
+Iteration 1
+Using quantile 0.7
+Iteration 2
+Using quantile 0.7
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  did not converge--results might be invalid!; try increasing work or maxit
+PC_ 1 
+Positive:  Hashtag01, Hashtag02, Hashtag03, Hashtag06, Hashtag04, Hashtag05, Hashtag07, Hashtag09 
+Negative:  Hashtag15, Hashtag14, CD45-HI30, CD45-2D1, Hashtag13, Hashtag12, Hashtag10, Hashtag08 
+PC_ 2 
+Positive:  Hashtag06, Hashtag04, Hashtag05, Hashtag15, CD45-HI30, CD45-2D1, Hashtag01, Hashtag14 
+Negative:  Hashtag13, Hashtag12, Hashtag10, Hashtag07, Hashtag09, Hashtag08, Hashtag02, Hashtag03 
+PC_ 3 
+Positive:  Hashtag04, Hashtag05, Hashtag13, Hashtag12, Hashtag06, Hashtag10, Hashtag07, Hashtag08 
+Negative:  Hashtag02, Hashtag01, Hashtag03, CD45-2D1, CD45-HI30, Hashtag15, Hashtag14, Hashtag09 
+PC_ 4 
+Positive:  Hashtag13, Hashtag12, Hashtag10, Hashtag01, Hashtag02, Hashtag03, Hashtag06, Hashtag14 
+Negative:  Hashtag07, Hashtag09, Hashtag08, CD45-2D1, CD45-HI30, Hashtag04, Hashtag05, Hashtag15 
+PC_ 5 
+Positive:  Hashtag14, Hashtag15, Hashtag08, Hashtag13, Hashtag03, Hashtag12, Hashtag02, Hashtag09 
+Negative:  CD45-2D1, Hashtag04, CD45-HI30, Hashtag10, Hashtag05, Hashtag07, Hashtag01, Hashtag06 
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+16:24:33 UMAP embedding parameters a = 0.9922 b = 1.112
+16:24:33 Read 20060 rows and found 16 numeric columns
+16:24:33 Using Annoy for neighbor search, n_neighbors = 30
+16:24:33 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:24:35 Writing NN index file to temp file /scratch/RtmpTNr7Vc/file33e6ae51725ab8
+16:24:35 Searching Annoy index using 1 thread, search_k = 3000
+16:24:42 Annoy recall = 100%
+16:24:43 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+16:24:43 Initializing from normalized Laplacian + noise (using irlba)
+16:24:45 Commencing optimization for 200 epochs, with 859138 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:24:52 Optimization finished
+Warning messages:
+1: Requested number is larger than the number of available items (16). Setting to 16. 
+2: Requested number is larger than the number of available items (16). Setting to 16. 
+3: Requested number is larger than the number of available items (16). Setting to 16. 
+4: Requested number is larger than the number of available items (16). Setting to 16. 
+5: Requested number is larger than the number of available items (16). Setting to 16. 

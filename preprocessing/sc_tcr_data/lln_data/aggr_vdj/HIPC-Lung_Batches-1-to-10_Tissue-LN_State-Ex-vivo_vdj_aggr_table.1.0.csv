@@ -1,0 +1,7 @@
+library_id,clonotypes,annotations,sample.sffx
+AqEhHIPCLN01_14,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_14_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_14_TCR/outs/filtered_contig_annotations.csv,1
+AqEhHIPCLN01_24,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_24_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_24_TCR/outs/filtered_contig_annotations.csv,2
+AqEhHIPCLN01_4,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_4_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_4_TCR/outs/filtered_contig_annotations.csv,3
+AqEhHIPCLN01_5,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_5_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/06-07-2024/vdj/AqEh_HIPC_LN01/AqEhHIPCLN01_5_TCR/outs/filtered_contig_annotations.csv,4
+AqEh_HIPC_LN02_Hu_1_6D,/path/to/user/sequencing_data/07-08-2024/vdj/AqEh_HIPC_LN02/AqEh_HIPC_LN02_Hu_1_6D_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/07-08-2024/vdj/AqEh_HIPC_LN02/AqEh_HIPC_LN02_Hu_1_6D_TCR/outs/filtered_contig_annotations.csv,5
+AqEh_HIPC_LN02_Hu_2_6D,/path/to/user/sequencing_data/07-08-2024/vdj/AqEh_HIPC_LN02/AqEh_HIPC_LN02_Hu_2_6D_TCR/outs/clonotypes.csv,/path/to/user/sequencing_data/07-08-2024/vdj/AqEh_HIPC_LN02/AqEh_HIPC_LN02_Hu_2_6D_TCR/outs/filtered_contig_annotations.csv,6

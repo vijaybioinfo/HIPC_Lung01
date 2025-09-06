@@ -1,0 +1,47 @@
+
+
+######### ------------- Job to Run Seurat Analysis ------------ #########
+
+
+### --------------------------- Arguments --------------------------- ###
+### --------------------- Job general arguments --------------------- ###
+Project name: HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo
+Job output directory: /path/to/user/sequencing_data/12-15-2024/jobs_scripts/aggr_vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo_1.0_02-28-2025
+### ------------------- Seurat analysis arguments ------------------- ###
+Reports: /path/to/user/sequencing_data/12-15-2024/aggr_vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo_1.0_02-28-2025
+General input-data path: /path/to/user/sequencing_data/12-15-2024/vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo
+Path to table describing samples to be aggregated: /path/to/user/sequencing_data/12-15-2024/aggr_vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo/data/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo_vdj_aggr_table.1.0.csv
+############    --------------   aggr vdj    --------------    ############
+### -------------------------- Dependencies ------------------------- ###
+Dependencies loaded!
+
+
+### --------------------------- Arguments --------------------------- ###
+General reports path: /path/to/user/sequencing_data/12-15-2024/aggr_vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo_1.0_02-28-2025 
+General input path: /path/to/user/sequencing_data/12-15-2024/vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo 
+Aboslute path to aggregation table file: /path/to/user/sequencing_data/12-15-2024/aggr_vdj/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo/data/HIPC-Lung_Batches-1-to-10_Tissue-LN_State-Ex-vivo_vdj_aggr_table.1.0.csv 
+
+
+### --------------------------- Load data --------------------------- ###
+Aggregation table loaded...
+Clonptypes data loaded...
+Cells-clonotypes relations data loaded...
+
+
+### ------------------------- Main program -------------------------- ###
+### ------------------------ Pre-aggregation ------------------------ ###
+Data modified for aggregation!
+
+
+### -------------------------- Aggregation -------------------------- ###
+
+
+# ------> CMCs report.
+	CMCs detected: 14717 
+	Non-well supported CMCs: 13167 
+
+Aggregation finished and both aggregated files output to general reports path!
+
+PROGRAM FINISHED!
+Job completed!
+Check for errors if any.

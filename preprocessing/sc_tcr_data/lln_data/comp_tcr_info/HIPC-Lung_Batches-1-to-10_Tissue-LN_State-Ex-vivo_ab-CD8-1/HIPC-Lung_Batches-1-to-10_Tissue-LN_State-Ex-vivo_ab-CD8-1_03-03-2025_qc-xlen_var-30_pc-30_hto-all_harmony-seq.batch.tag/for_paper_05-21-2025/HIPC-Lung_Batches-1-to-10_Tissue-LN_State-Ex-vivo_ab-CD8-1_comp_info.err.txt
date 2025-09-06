@@ -1,0 +1,3 @@
+Warning message:
+In `[.data.table`(meta.data, , `:=`(new.tag, NULL)) :
+  Column 'new.tag' does not exist to remove

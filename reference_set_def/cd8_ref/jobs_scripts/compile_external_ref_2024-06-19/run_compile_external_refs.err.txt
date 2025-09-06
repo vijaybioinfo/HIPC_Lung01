@@ -1,0 +1,15 @@
+Loading required package: grid
+Loading required package: futile.logger
+There were 50 or more warnings (use warnings() to see the first 50)
+There were 50 or more warnings (use warnings() to see the first 50)
+Warning message:
+Some of the identified alleles in the DB cannot be confirmed based on IMGT.
+ 
+Warning message:
+We failed to validate the HLA gene name for a fairly great amount of DB entries with HLA information.
+ 
+Warning message:
+Some of the identified alleles in the DB cannot be confirmed based on IMGT.
+ 
+`geom_line()`: Each group consists of only one observation.
+ℹ Do you need to adjust the group aesthetic?

@@ -1,0 +1,55 @@
+
+
+######### --------- Job to Run HTO-based deconvolution --------- #########
+
+
+### --------------------------- Arguments --------------------------- ###
+### --------------------- Job general arguments --------------------- ###
+Project name: DICE_TCR018_Hu_CMV1_17D_CITE
+Job output directory: /root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/jobs_scripts/deconvolution/HTO_based/05-05-2023/DICE_TCR018/DICE_TCR018_Hu_CMV1_17D_CITE/DICE_TCR018_Hu_CMV1_17D_CITE_05-12-2023_100umis_thold
+### --------------- HTO-based deconvolution arguments --------------- ###
+Absolute path to reports directory: /root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/05-05-2023/DICE_TCR018/DICE_TCR018_Hu_CMV1_17D_CITE/DICE_TCR018_Hu_CMV1_17D_CITE_05-12-2023_100umis_thold
+Absolute path to HTO data: /root/bioadhoc-temp/Groups/vd-vijay/vfajardo/sequencing_data/05-05-2023/count/DICE_TCR018/DICE_TCR018_Hu_CMV1_17D_CITE/outs/raw_feature_bc_matrix
+Gene expression data or NULL value: 
+UMI threshold for raw data filtering or NULL value: 100
+############    -------   HTO-based Deconvolution    ------    ############
+
+
+### -------------------------- Dependencies ------------------------- ###
+Dependencies loaded...
+
+
+### --------------------------- Arguments --------------------------- ###
+Reports path: /root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/05-05-2023/DICE_TCR018/DICE_TCR018_Hu_CMV1_17D_CITE/DICE_TCR018_Hu_CMV1_17D_CITE_05-12-2023_100umis_thold 
+Absolute path to HTO data: /root/bioadhoc-temp/Groups/vd-vijay/vfajardo/sequencing_data/05-05-2023/count/DICE_TCR018/DICE_TCR018_Hu_CMV1_17D_CITE/outs/raw_feature_bc_matrix 
+Project name: DICE_TCR018_Hu_CMV1_17D_CITE 
+HTO names:  
+UMI threshold: 100 
+
+
+### --------------------------- Load data --------------------------- ###
+HTO data has been loaded.
+
+
+### ---------------------- Data preprocessing ----------------------- ###
+Preprocessing directory has been created. Check warnings if any.
+
+
+# ---> Filtering according to UMI counts.
+UMI count threshold to use: 100
+Filtering applied!
+
+
+HTO table has been filtered if it was required.
+
+
+### ------------------------- Main program -------------------------- ###
+
+
+### ----------------------- HTO seurat object ----------------------- ###
+HTO-assay created as a seurat object and processed accordingly.
+
+
+### ------------------------- Deconvolution ------------------------- ###
+Job completed!
+Check for errors if any.

@@ -1,0 +1,69 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+Normalizing across features
+Iteration 1
+Using quantile 0.8
+Iteration 2
+Using quantile 0.8
+Iteration 3
+Using quantile 0.8
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  did not converge--results might be invalid!; try increasing work or maxit
+PC_ 1 
+Positive:  Hashtag04, Hashtag05, Hashtag06, Hashtag08, Hashtag09 
+Negative:  Hashtag02, Hashtag01, Hashtag03, Hashtag10, Hashtag07 
+PC_ 2 
+Positive:  Hashtag04, Hashtag06, Hashtag05, Hashtag01, Hashtag03 
+Negative:  Hashtag09, Hashtag07, Hashtag10, Hashtag08, Hashtag02 
+PC_ 3 
+Positive:  Hashtag08, Hashtag03, Hashtag07, Hashtag10, Hashtag01 
+Negative:  Hashtag09, Hashtag02, Hashtag05, Hashtag04, Hashtag06 
+PC_ 4 
+Positive:  Hashtag02, Hashtag03, Hashtag05, Hashtag10, Hashtag04 
+Negative:  Hashtag01, Hashtag06, Hashtag09, Hashtag08, Hashtag07 
+PC_ 5 
+Positive:  Hashtag10, Hashtag01, Hashtag06, Hashtag02, Hashtag05 
+Negative:  Hashtag09, Hashtag03, Hashtag08, Hashtag07, Hashtag04 
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+22:10:53 UMAP embedding parameters a = 0.9922 b = 1.112
+22:10:53 Read 17842 rows and found 10 numeric columns
+22:10:53 Using Annoy for neighbor search, n_neighbors = 30
+22:10:53 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+22:10:56 Writing NN index file to temp file /scratch/RtmpzJHjjG/file19e96e10f80afb
+22:10:56 Searching Annoy index using 1 thread, search_k = 3000
+22:11:05 Annoy recall = 100%
+22:11:06 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+22:11:07 Initializing from normalized Laplacian + noise (using irlba)
+22:11:10 Commencing optimization for 200 epochs, with 709912 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+22:11:20 Optimization finished
+Warning messages:
+1: Requested number is larger than the number of available items (10). Setting to 10. 
+2: Requested number is larger than the number of available items (10). Setting to 10. 
+3: Requested number is larger than the number of available items (10). Setting to 10. 
+4: Requested number is larger than the number of available items (10). Setting to 10. 
+5: Requested number is larger than the number of available items (10). Setting to 10. 

@@ -1,0 +1,47 @@
+
+
+######### ------------- Job to Run Seurat Analysis ------------ #########
+
+
+### --------------------------- Arguments --------------------------- ###
+### --------------------- Job general arguments --------------------- ###
+Project name: DICE-VirusSpec_Batches-1-to-15_CD4
+Job output directory: /path/to/user/sequencing_data/08-21-2023/jobs_scripts/aggr_vdj/DICE-VirusSpec_Batches-1-to-15_CD4/DICE-VirusSpec_Batches-1-to-15_CD4_0.3_10-08-2024
+### ------------------- Seurat analysis arguments ------------------- ###
+Reports: /path/to/user/sequencing_data/08-21-2023/aggr_vdj/DICE-VirusSpec_Batches-1-to-15_CD4/DICE-VirusSpec_Batches-1-to-15_CD4_0.3_10-08-2024
+General input-data path: /path/to/user/sequencing_data/08-21-2023/vdj/DICE-VirusSpec_Batches-1-to-15_CD4
+Path to table describing samples to be aggregated: /path/to/user/sequencing_data/08-21-2023/aggr_vdj/data/DICE-VirusSpec_Batches-1-to-15_CD4_aggr_table.0.3.csv
+############    --------------   aggr vdj    --------------    ############
+### -------------------------- Dependencies ------------------------- ###
+Dependencies loaded!
+
+
+### --------------------------- Arguments --------------------------- ###
+General reports path: /path/to/user/sequencing_data/08-21-2023/aggr_vdj/DICE-VirusSpec_Batches-1-to-15_CD4/DICE-VirusSpec_Batches-1-to-15_CD4_0.3_10-08-2024 
+General input path: /path/to/user/sequencing_data/08-21-2023/vdj/DICE-VirusSpec_Batches-1-to-15_CD4 
+Aboslute path to aggregation table file: /path/to/user/sequencing_data/08-21-2023/aggr_vdj/data/DICE-VirusSpec_Batches-1-to-15_CD4_aggr_table.0.3.csv 
+
+
+### --------------------------- Load data --------------------------- ###
+Aggregation table loaded...
+Clonptypes data loaded...
+Cells-clonotypes relations data loaded...
+
+
+### ------------------------- Main program -------------------------- ###
+### ------------------------ Pre-aggregation ------------------------ ###
+Data modified for aggregation!
+
+
+### -------------------------- Aggregation -------------------------- ###
+
+
+# ------> CMCs report.
+	CMCs detected: 184217 
+	Non-well supported CMCs: 155829 
+
+Aggregation finished and both aggregated files output to general reports path!
+
+PROGRAM FINISHED!
+Job completed!
+Check for errors if any.

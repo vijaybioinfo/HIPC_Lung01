@@ -1,0 +1,67 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+Normalizing across features
+Iteration 1
+Using quantile 0.75
+Iteration 2
+Using quantile 0.75
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  did not converge--results might be invalid!; try increasing work or maxit
+PC_ 1 
+Positive:  Hashtag13, Hashtag14, Hashtag12, Hashtag10, Hashtag07, Hashtag09 
+Negative:  Hashtag01, Hashtag05, Hashtag06, Hashtag02, Hashtag03, Hashtag04 
+PC_ 2 
+Positive:  Hashtag01, Hashtag02, Hashtag03, Hashtag06, Hashtag13, Hashtag04 
+Negative:  Hashtag07, Hashtag08, Hashtag09, Hashtag10, Hashtag14, Hashtag05 
+PC_ 3 
+Positive:  Hashtag01, Hashtag02, Hashtag03, Hashtag07, Hashtag08, Hashtag09 
+Negative:  Hashtag05, Hashtag04, Hashtag06, Hashtag14, Hashtag12, Hashtag13 
+PC_ 4 
+Positive:  Hashtag06, Hashtag01, Hashtag10, Hashtag08, Hashtag07, Hashtag13 
+Negative:  Hashtag03, Hashtag02, Hashtag05, Hashtag14, Hashtag09, Hashtag04 
+PC_ 5 
+Positive:  Hashtag05, Hashtag01, Hashtag10, Hashtag09, Hashtag02, Hashtag14 
+Negative:  Hashtag04, Hashtag03, Hashtag08, Hashtag06, Hashtag13, Hashtag07 
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+12:55:28 UMAP embedding parameters a = 0.9922 b = 1.112
+12:55:28 Read 33354 rows and found 13 numeric columns
+12:55:28 Using Annoy for neighbor search, n_neighbors = 30
+12:55:28 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+12:55:31 Writing NN index file to temp file /scratch/Rtmpv9r91O/file3645f534138f69
+12:55:31 Searching Annoy index using 1 thread, search_k = 3000
+12:55:47 Annoy recall = 100%
+12:55:47 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+12:55:48 Initializing from normalized Laplacian + noise (using irlba)
+12:55:54 Commencing optimization for 200 epochs, with 1368234 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+12:56:05 Optimization finished
+Warning messages:
+1: Requested number is larger than the number of available items (13). Setting to 13. 
+2: Requested number is larger than the number of available items (13). Setting to 13. 
+3: Requested number is larger than the number of available items (13). Setting to 13. 
+4: Requested number is larger than the number of available items (13). Setting to 13. 
+5: Requested number is larger than the number of available items (13). Setting to 13. 

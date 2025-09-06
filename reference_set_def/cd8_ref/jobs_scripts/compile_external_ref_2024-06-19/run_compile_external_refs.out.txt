@@ -1,0 +1,626 @@
+
+
+############    -----   Compile info from external    -----    ############
+############    -------   TCR/epitope databases    --------    ############
+
+
+### -------------------------- Dependencies ------------------------- ###
+
+
+### --------------------------- Arguments --------------------------- ###
+
+
+### --------------------------- Functions --------------------------- ###
+
+
+### ------------------------- Loading data -------------------------- ###
+
+
+### ------------------------- Main program -------------------------- ###
+
+
+### ------------------------- IEDB process -------------------------- ###
+  [1] "H2-Db"                                                                                                                                                               
+  [2] "H2-b class I"                                                                                                                                                        
+  [3] "H2-IEd, H2-d class II"                                                                                                                                               
+  [4] "H2-IEk"                                                                                                                                                              
+  [5] "H2-Kb"                                                                                                                                                               
+  [6] "H2-IAb"                                                                                                                                                              
+  [7] "H2-Ld"                                                                                                                                                               
+  [8] "HLA-B*35:01, HLA-B*35:08"                                                                                                                                            
+  [9] "HLA-E*01:01, HLA-E*01:03"                                                                                                                                            
+ [10] "H2-b class II"                                                                                                                                                       
+ [11] "H2-IAu"                                                                                                                                                              
+ [12] "human CD1d"                                                                                                                                                          
+ [13] "H2-IAg7"                                                                                                                                                             
+ [14] "H2-IAk"                                                                                                                                                              
+ [15] "H2 class II"                                                                                                                                                         
+ [16] "HLA-DRA*01:01/DRB5*01:01"                                                                                                                                            
+ [17] "HLA-A*02:01, HLA-A*02:01 A69G mutant, HLA-A*02:01 E166A mutant, HLA-A*02:01 K66A mutant, HLA-A*02:01 R65A mutant, HLA-A*02:01 T163A mutant, HLA-A*02:01 W167A mutant"
+ [18] "mouse CD1d"                                                                                                                                                          
+ [19] "human CD1d, mouse CD1d"                                                                                                                                              
+ [20] "HLA-B*44:02, HLA-B*44:03, HLA-B*44:05"                                                                                                                               
+ [21] "HLA-A*02:01, HLA-A*02:01 K66A, E63Q mutant"                                                                                                                          
+ [22] "HLA-A*02:01 K66A, E63Q mutant"                                                                                                                                       
+ [23] "HLA-A*02:01 K66A mutant"                                                                                                                                             
+ [24] "H2-Kb, H2-Kb Y84A mutant, H2-Kb Y84C mutant"                                                                                                                         
+ [25] "H2-Kb, H2-Kb Y22F, M23I, E24S, D30N mutant"                                                                                                                          
+ [26] "H2-IAd"                                                                                                                                                              
+ [27] "H2-Kb Y22F, M23I, E24S, D30N mutant"                                                                                                                                 
+ [28] "HLA-A*02:01 T163A mutant"                                                                                                                                            
+ [29] "HLA-A*02:01 W167A mutant"                                                                                                                                            
+ [30] "HLA-A*02:01, HLA-A*02:01 K66A mutant, HLA-A*02:01 Q155A mutant, HLA-A*02:01 T163A mutant, HLA-A*02:01 W167A mutant"                                                  
+ [31] "H2-Kb D77S, K89A mutant"                                                                                                                                             
+ [32] "HLA-DRA*01:01/DRB1*15:01"                                                                                                                                            
+ [33] "H2-IAq"                                                                                                                                                              
+ [34] "H2-s class I"                                                                                                                                                        
+ [35] "H2-IAs"                                                                                                                                                              
+ [36] "H2-IEd"                                                                                                                                                              
+ [37] "H2-Kd"                                                                                                                                                               
+ [38] "HLA-B*44:02, HLA-B*44:05"                                                                                                                                            
+ [39] "HLA-A*02:01, HLA-A*02:01 A150P mutant"                                                                                                                               
+ [40] "H2 class II, H2-b class I"                                                                                                                                           
+ [41] "HLA-B*35:08 Q65A, T69A, Q155A mutant"                                                                                                                                
+ [42] "HLA-B*35:08, HLA-B*35:08 Q65A, T69A, Q155A mutant"                                                                                                                   
+ [43] "HLA-B*35:08 Q155A mutant"                                                                                                                                            
+ [44] "H2 class I"                                                                                                                                                          
+ [45] "H2-d class II"                                                                                                                                                       
+ [46] "HLA-DRA*01:01/DRB1*04:01"                                                                                                                                            
+ [47] "HLA class II"                                                                                                                                                        
+ [48] "H2-IAb I67F, R70Q, T71K mutant"                                                                                                                                      
+ [49] "H2-Q9"                                                                                                                                                               
+ [50] "H2-IAb, mouse CD1d"                                                                                                                                                  
+ [51] "HLA-DQA1*01:02/DQB1*06:02"                                                                                                                                           
+ [52] "HLA-DQA1*01:02/DQB1*06:02, HLA-DRA*01:01/DRB1*15:01, HLA-DRA*01:01/DRB5*01:01"                                                                                       
+ [53] "HLA-DRA*01:01/DRB1*15:01, HLA-DRA*01:01/DRB5*01:01"                                                                                                                  
+ [54] "H2-IAb, H2-a class II"                                                                                                                                               
+ [55] "HLA-DQA1*03:01/DQB1*03:02"                                                                                                                                           
+ [56] "HLA-DR, HLA-DRB1*08:03, HLA-DRB1*09:01, HLA-DRB1*13:02"                                                                                                              
+ [57] "HLA-DR, HLA-DRB1*04:04, HLA-DRB1*08:03, HLA-DRB1*09:01, HLA-DRB1*15:01, HLA-DRB1*15:03"                                                                              
+ [58] "HLA-B*57:01, HLA-B*57:03"                                                                                                                                            
+ [59] "human CD1b"                                                                                                                                                          
+ [60] "H2-Db, H2-Db Y159F mutant"                                                                                                                                           
+ [61] "human MR1 K43A mutant"                                                                                                                                               
+ [62] "cattle MR1"                                                                                                                                                          
+ [63] "human MR1"                                                                                                                                                           
+ [64] "HLA-DQA1*05:01/DQB1*02:01"                                                                                                                                           
+ [65] "human CD1a"                                                                                                                                                          
+ [66] "human CD1c"                                                                                                                                                          
+ [67] "HLA-DQA1*01:02/DQB1*05:02"                                                                                                                                           
+ [68] "Class II, allele undetermined"                                                                                                                                       
+ [69] "mouse MR1"                                                                                                                                                           
+ [70] "HLA-DQA1*05:01/DQB1*03:02"                                                                                                                                           
+ [71] "HLA-DQA1*03:01/DQB1*03:02, HLA-DQA1*05:01/DQB1*03:02"                                                                                                                
+ [72] "H2 class II, H2-b class II"                                                                                                                                          
+ [73] "H2-u class II"                                                                                                                                                       
+ [74] "HLA-DRA*01:01/DRB1*01:01, HLA-DRA*01:01/DRB1*04:01"                                                                                                                  
+ [75] "HLA-DRA*01:01/DRB1*01:01"                                                                                                                                            
+ [76] "HLA-DRB1*01:01, HLA-DRB1*07:01"                                                                                                                                      
+ [77] "HLA-DRB1*01:01, HLA-DRB1*07:01, HLA-DRB1*11:01, HLA-DRB5*01:01"                                                                                                      
+ [78] "HLA-DRB1*01:01, HLA-DRB1*07:01, HLA-DRB1*15:02"                                                                                                                      
+ [79] "HLA-DRB1*01:01, HLA-DRB1*07:01, HLA-DRB5*01:01"                                                                                                                      
+ [80] "HLA-DRB1*07:01, HLA-DRB1*11:01, HLA-DRB5*01:01"                                                                                                                      
+ [81] "HLA-DRB1*07:01, HLA-DRB5*01:01"                                                                                                                                      
+ [82] "HLA-DRB1*11:01, HLA-DRB1*15:02, HLA-DRB5*01:01"                                                                                                                      
+ [83] "HLA-DRB1*11:01, HLA-DRB5*01:01"                                                                                                                                      
+ [84] "HLA-DRB1*15:02, HLA-DRB5*01:01"                                                                                                                                      
+ [85] "HLA-DRB1*01:01, HLA-DRB1*11:01, HLA-DRB1*15:02, HLA-DRB5*01:01"                                                                                                      
+ [86] "HLA-Cw3"                                                                                                                                                             
+ [87] "HLA-DRA*01:01/DRB1*11:01"                                                                                                                                            
+ [88] "HLA-DRB1*04:04, HLA-DRB1*08:18, HLA-DRB1*09:01, HLA-DRB1*13:02, HLA-DRB1*15:01, HLA-DRB1*15:03, HLA-DRB1*16:02"                                                      
+ [89] "HLA-DRB1*04:04, HLA-DRB1*08:03, HLA-DRB1*08:18, HLA-DRB1*09:01, HLA-DRB1*13:02, HLA-DRB1*15:01, HLA-DRB1*15:03, HLA-DRB1*16:02"                                      
+ [90] "HLA-DRB1*04:04, HLA-DRB1*08:03, HLA-DRB1*08:18, HLA-DRB1*09:01, HLA-DRB1*15:01, HLA-DRB1*15:03, HLA-DRB1*16:02"                                                      
+ [91] "HLA-DRB1*08:18, HLA-DRB1*15:01, HLA-DRB1*15:03"                                                                                                                      
+ [92] "HLA-DRB1*13:02, HLA-DRB1*15:03"                                                                                                                                      
+ [93] "HLA-DRB1*08:18, HLA-DRB1*15:01"                                                                                                                                      
+ [94] "HLA-DRB1*08:03, HLA-DRB1*08:18, HLA-DRB1*09:01, HLA-DRB1*13:02, HLA-DRB1*16:02"                                                                                      
+ [95] "HLA-DRB1*08:03, HLA-DRB1*08:18, HLA-DRB1*13:02"                                                                                                                      
+ [96] "HLA-DRB1*08:03, HLA-DRB1*09:01"                                                                                                                                      
+ [97] "HLA class I"                                                                                                                                                         
+ [98] "HLA-DQA1*03:01/DQB1*02:01"                                                                                                                                           
+ [99] "HLA-DQA1*03:01/DQB1*02:01, HLA-DQA1*03:01/DQB1*03:02"                                                                                                                
+[100] "HLA-DPA1*01:03/DPB1*02:01"                                                                                                                                           
+[101] "HLA-DQA1*02:01/DQB1*02:02, HLA-DQA1*05:01/DQB1*02:01"                                                                                                                
+[102] "HLA-DRA*01:01/DRB1*03:01"                                                                                                                                            
+[103] "Mamu-A1*065:01"                                                                                                                                                      
+[104] "HLA-DRB1*04:02, HLA-DRB1*04:05"                                                                                                                                      
+[105] "mouse CD1d1"                                                                                                                                                         
+[106] "mouse CD1d, mouse CD1d1"                                                                                                                                             
+[107] "HLA-DQA1*02:01/DQB1*02:02"                                                                                                                                           
+[108] "HLA-DRB1*04:01, HLA-DRB1*04:04"                                                                                                                                      
+[109] "HLA-A*02:01, HLA-DPB1*11:01"                                                                                                                                         
+[110] "HLA-DPA1*02:01/DPB1*13:01"                                                                                                                                           
+[111] "HLA-DRB3*02:01, HLA-DRB3*03:01"                                                                                                                                      
+[112] "HLA-B*44:03, HLA-B*44:08"                                                                                                                                            
+[113] "human MR1 R9H mutant"                                                                                                                                                
+[114] "Gaga-BF2*015:01"                                                                                                                                                     
+[115] "HLA-DRB1*15:01, HLA-DRB5*01:01"                                                                                                                                      
+[116] "HLA-DRA*01:01/DRB1*07:01"                                                                                                                                            
+[117] "HLA-DPA1*01:03/DPB1*04:01"                                                                                                                                           
+[118] "HLA-DRB1*04:01, HLA-DRB1*04:05"                                                                                                                                      
+[119] "HLA-DQA1*05:01/DQB1*02:01, HLA-DQA1*05:01/DQB1*02:02"                                                                                                                
+[120] "HLA-DQA1*05:01/DQB1*02:01, HLA-DQA1*05:01/DQB1*02:02, HLA-DRB4*01:01"                                                                                                
+[121] "HLA-DQA1*05:01/DQB1*03:02, HLA-DRB4*01:01"                                                                                                                           
+[122] "HLA-DQB1*05:01, HLA-DQB1*05:02"                                                                                                                                      
+[123] "HLA-B*08:01, HLA-B*15:01, HLA-B*15:02"                                                                                                                               
+[124] "HLA-B*15:01, HLA-B*15:02, HLA-B*15:21, HLA-B*15:25"                                                                                                                  
+[125] "HLA-B*15:02, HLA-B*15:21"                                                                                                                                            
+[126] "HLA-B*15:01, HLA-B*15:02"                                                                                                                                            
+[127] "HLA-DPw2"                                                                                                                                                            
+[128] "HLA-B*13:01, HLA-DQB1*05:01"                                                                                                                                         
+[129] "HLA-A*02:01, HLA-A*24:02"                                                                                                                                            
+[130] "HLA-DRB1*15:01, HLA-DRB1*15:02, HLA-DRB1*15:03, HLA-DRB1*15:04"                                                                                                      
+[131] "HLA-DQA1*01:01/DQB1*05:01"                                                                                                                                           
+[132] "HLA-DPA1*02:02/DPB1*05:01"                                                                                                                                           
+[133] "HLA-DRA*01:01/DRB3*02:02"                                                                                                                                            
+[134] "HLA-DPw4"                                                                                                                                                            
+[135] "HLA-B*27:05, HLA-B*27:09"                                                                                                                                            
+[136] "HLA-DRA*01:01/DRB3*01:01"                                                                                                                                            
+[137] "HLA-A*03:01, HLA-A*11:01"                                                                                                                                            
+[138] "H2-Qa-1b"                                                                                                                                                            
+[139] "H2 class II, HLA-DRB1*15:01"                                                                                                                                         
+null device 
+          1 
+
+
+### ------------------------- VDJdb process ------------------------- ###
+null device 
+          1 
+
+
+### ------------------------- McPAS process ------------------------- ###
+null device 
+          1 
+
+
+### ------------------- Reference harmonization -------------------- ###
+  [1] "Influenza A virus"                                                                                                        
+  [2] "Influenza A virus (A/nt/60/1968(H3N2)) (Influenza A virus (A/NT/60/68/(H3N2)))"                                           
+  [3] "Influenza A virus (A/Puerto Rico/8/1934(H1N1)) (Influenza A virus (A/PR 8/34 (H1N1)))"                                    
+  [4] "Columba livia (carrier pigeon)"                                                                                           
+  [5] "Streptomyces hainanensis"                                                                                                 
+  [6] "Tetronarce californica (Pacific electric ray)"                                                                            
+  [7] "Mammarenavirus choriomeningitidis (Lymphocytic choriomeningitis mammarenavirus)"                                          
+  [8] "Gallus gallus (chicken)"                                                                                                  
+  [9] "Mus musculus (mouse)"                                                                                                     
+ [10] "Human herpesvirus 1"                                                                                                      
+ [11] "Mycobacterium tuberculosis"                                                                                               
+ [12] "Rattus norvegicus (brown rat)"                                                                                            
+ [13] "Leishmania major"                                                                                                         
+ [14] "Friend murine leukemia virus (Friend murine leukemia virus F-MuLV)"                                                       
+ [15] "Human adenovirus 5 (Adenovirus 5)"                                                                                        
+ [16] "Respirovirus muris (Murine respirovirus)"                                                                                 
+ [17] "Bos taurus (bovine)"                                                                                                      
+ [18] "Manduca sexta (Carolina sphinx)"                                                                                          
+ [19] "Vesicular stomatitis virus (vesicular stomatitis virus VSV)"                                                              
+ [20] "Homo sapiens (human)"                                                                                                     
+ [21] "Sphingomonas"                                                                                                             
+ [22] "Agelas mauritiana"                                                                                                        
+ [23] "Human T-cell leukemia virus type I (Human T cell leukemia virus type 1)"                                                  
+ [24] "Toxoplasma gondii"                                                                                                        
+ [25] "Staphylococcus aureus"                                                                                                    
+ [26] "Mycobacterium avium"                                                                                                      
+ [27] "Bacillus subtilis"                                                                                                        
+ [28] "Haemophilus influenzae"                                                                                                   
+ [29] "Salmonella enterica subsp. enterica serovar Typhimurium"                                                                  
+ [30] "Salmonella enterica subsp. salamae"                                                                                       
+ [31] "Salmonella enterica subsp. enterica serovar Typhi str. 404ty (Salmonella enterica subsp. enterica serovar Typhi 404ty)"   
+ [32] "Salmonella enterica subsp. houtenae"                                                                                      
+ [33] "Salmonella enterica subsp. enterica serovar Indiana"                                                                      
+ [34] "Human herpesvirus 4 (Epstein Barr virus)"                                                                                 
+ [35] "Influenza A virus (A/Puerto Rico/8/34/Mount Sinai(H1N1)) (Influenza A virus (A/Puerto Rico/8/1934(mt sinai)(H1N1)))"      
+ [36] "Human respiratory syncytial virus A2 (Human respiratory syncytial virus (strain A2))"                                     
+ [37] "Human respiratory syncytial virus"                                                                                        
+ [38] "Glycine max (soybeans)"                                                                                                   
+ [39] "Borreliella burgdorferi (Lyme disease spirochete)"                                                                        
+ [40] "Alphapolyomavirus muris (Murine polyomavirus)"                                                                            
+ [41] "AKR (endogenous) murine leukemia virus (AKR murine leukemia virus)"                                                       
+ [42] "Sus scrofa (pig)"                                                                                                         
+ [43] "Streptococcus pneumoniae"                                                                                                 
+ [44] "Influenza A virus (A/Japan/305/1957(H2N2)) (Influenza A virus (A/Japan/305/57(H2N2)))"                                    
+ [45] "Novosphingobium aromaticivorans"                                                                                          
+ [46] "Listeria monocytogenes"                                                                                                   
+ [47] "Blastomyces dermatitidis"                                                                                                 
+ [48] "H1N1 subtype (H1N1)"                                                                                                      
+ [49] "Human immunodeficiency virus 1 (human immunodeficiency virus 1 HIV-1)"                                                    
+ [50] "Murid betaherpesvirus 1 (Mouse cytomegalovirus 1)"                                                                        
+ [51] "Plasmodium berghei ANKA"                                                                                                  
+ [52] "Human papillomavirus type 16 (Human papilloma virus type 16)"                                                             
+ [53] "Hepatitis B virus (Human hepatitis B virus)"                                                                              
+ [54] "Mycobacterium tuberculosis variant bovis BCG"                                                                             
+ [55] "Triticum aestivum (Canadian hard winter wheat)"                                                                           
+ [56] "Simian immunodeficiency virus (Chimpanzee immunodeficiency virus)"                                                        
+ [57] "Mycolicibacterium smegmatis"                                                                                              
+ [58] "Bifidobacterium breve"                                                                                                    
+ [59] "Ligilactobacillus murinus ASF361"                                                                                         
+ [60] "Anaerotignum propionicum"                                                                                                 
+ [61] "Eubacterium plexicaudatum ASF492"                                                                                         
+ [62] "Akkermansia muciniphila ATCC BAA-835 (Akkermansia muciniphila str. ATCC BAA-835)"                                         
+ [63] "Murine leukemia virus (murine leukemia virus MLV)"                                                                        
+ [64] "Influenza A virus (A/bar-headed goose/Qinghai/1-HVRI/2006(H5N1))"                                                         
+ [65] "Lymphocytic choriomeningitis virus (strain Armstrong)"                                                                    
+ [66] "Sulfurovum sp. NBC37-1"                                                                                                   
+ [67] "Arabidopsis thaliana (mouse-ear cress)"                                                                                   
+ [68] "Rhodococcus sp. AW25M09"                                                                                                  
+ [69] "Selaginella moellendorffii"                                                                                               
+ [70] "Legionella longbeachae NSW150 (Legionella longbeachae str. NSW150)"                                                       
+ [71] "Encephalitozoon romaleae SJ-2008"                                                                                         
+ [72] "Oryzias latipes (Japanese rice fish)"                                                                                     
+ [73] "Kitasatospora setae KM-6054 (Kitasatospora setae str. KM-6054)"                                                           
+ [74] "Desulfotignum phosphitoxidans DSM 13687"                                                                                  
+ [75] "Volvox carteri f. nagariensis"                                                                                            
+ [76] "Ruminiclostridium papyrosolvens"                                                                                          
+ [77] "Oryctolagus cuniculus (rabbit)"                                                                                           
+ [78] "Anoxybacillus flavithermus"                                                                                               
+ [79] "Macrophomina phaseolina (charcoal rot)"                                                                                   
+ [80] "Emiliania huxleyi"                                                                                                        
+ [81] "Rhizobium leguminosarum"                                                                                                  
+ [82] "Runella slithyformis"                                                                                                     
+ [83] "Blastococcus saxobsidens DD2 (Blastococcus saxobsidens str. DD2)"                                                         
+ [84] "Cavenderia fasciculata"                                                                                                   
+ [85] "Ogataea parapolymorpha"                                                                                                   
+ [86] "Myxococcus stipitatus"                                                                                                    
+ [87] "Shouchella clausii KSM-K16"                                                                                               
+ [88] "Trichosporon asahii var. asahii CBS 2479"                                                                                 
+ [89] "Acinetobacter baylyi"                                                                                                     
+ [90] "SARS-CoV2"                                                                                                                
+ [91] "Human herpesvirus 5 (Human cytomegalovirus)"                                                                              
+ [92] "Human herpesvirus 3 (Varicella-zoster virus)"                                                                             
+ [93] "Human herpesvirus 5 strain AD169 (Human cytomegalovirus (strain AD169))"                                                  
+ [94] "JC polyomavirus (Human polyomavirus (type JC))"                                                                           
+ [95] "Escherichia coli"                                                                                                         
+ [96] "Akkermansia muciniphila"                                                                                                  
+ [97] "Hordeum vulgare (barley)"                                                                                                 
+ [98] "Human herpesvirus 2"                                                                                                      
+ [99] "Coxsackievirus B4 (Coxsackie B virus type 4)"                                                                             
+[100] "Dengue virus"                                                                                                             
+[101] "Plasmodium falciparum NF54"                                                                                               
+[102] "Merkel cell polyomavirus (MCPyV isolate R17b)"                                                                            
+[103] "Prescottella equi"                                                                                                        
+[104] "Sporosarcina newyorkensis"                                                                                                
+[105] "Candida orthopsilosis"                                                                                                    
+[106] "Olsenella uli"                                                                                                            
+[107] "Schinkia azotoformans (Bacillus azotiformans)"                                                                            
+[108] "Priestia koreensis"                                                                                                       
+[109] "Halalkalibacter hemicellulosilyticus"                                                                                     
+[110] "Bacillus [genus]"                                                                                                         
+[111] "Bacillus yapensis"                                                                                                        
+[112] "Alkalihalobacillus trypoxylicola"                                                                                         
+[113] "Enterococcus saccharolyticus"                                                                                             
+[114] "Middle East respiratory syndrome-related coronavirus (MERS coronavirus)"                                                  
+[115] "Human coronavirus NL63 (Coronavirus NL63)"                                                                                
+[116] "Human coronavirus 229E (Coronavirus 229E)"                                                                                
+[117] "Human coronavirus HKU1 (CoV-HKU1)"                                                                                        
+[118] "Chaerephon bat coronavirus/Kenya/KY22/2006 (Bat coronavirus BtKY22/Chaerephon sp./Kenya/2006)"                            
+[119] "NL63-related bat coronavirus"                                                                                             
+[120] "dengue virus type 1 (dengue type 1 D1 virus)"                                                                             
+[121] "dengue virus type 2 (Dengue Virus serotype 2)"                                                                            
+[122] "Bacteroides stercoris"                                                                                                    
+[123] "Human coronavirus HKU1 (isolate N1)"                                                                                      
+[124] "Paslahepevirus balayani"                                                                                                  
+[125] "Hepatitis E virus type 3 (Hepatitis E virus genotype 3)"                                                                  
+[126] "Hepatitis C virus"                                                                                                        
+[127] "dengue virus type 3 (Dengue virus serotype 3)"                                                                            
+[128] "Salmonella enterica subsp. enterica serovar Typhi"                                                                        
+[129] "Corynebacterium glutamicum"                                                                                               
+[130] "Hepatitis C virus subtype 3a (Hepatitis C virus 3a)"                                                                      
+[131] "Hepacivirus hominis"                                                                                                      
+[132] "Hepatitis C virus (isolate BK)"                                                                                           
+[133] "Human rotavirus A (Human group A rotavirus)"                                                                              
+[134] "HIV-1 M:B_HXB2R (Human immunodeficiency virus type 1 (HXB2 ISOLATE))"                                                     
+[135] "Influenza A virus (A/California/04/2009(H1N1))"                                                                           
+[136] "Mycobacterium tuberculosis H37Rv (Mycobacterium tuberculosis str. H37Rv)"                                                 
+[137] "Influenza A virus (A/California/07/2009(H1N1))"                                                                           
+[138] "Chlamydia trachomatis"                                                                                                    
+[139] "Human herpesvirus 4 strain B95-8 (Epstein-Barr virus (strain B95-8))"                                                     
+[140] "Yellow fever virus (Flavivirus febricis)"                                                                                 
+[141] "Arachis hypogaea (peanut)"                                                                                                
+[142] "Influenza A virus (A/Memphis/4/1973(H3N2)) (Influenza A virus (A/Memphis/4/73(H3N2)))"                                    
+[143] "Mycobacterium"                                                                                                            
+[144] "Human coronavirus OC43 (Human coronavirus (strain OC43))"                                                                 
+[145] "Acidiphilium cryptum (Acidiphilum cryptum)"                                                                               
+[146] "Bat mastadenovirus G"                                                                                                     
+[147] "SARS coronavirus Tor2 (Severe acute respiratory syndrome-related coronavirus Tor2)"                                       
+[148] "Influenza B virus (Influenza virus type B)"                                                                               
+[149] "SARS-CoV1"                                                                                                                
+[150] "SARS coronavirus Urbani (SARS coronavirus strain Urbani)"                                                                 
+[151] "Severe acute respiratory syndrome coronavirus 2 Wuhan/Hu-1/2019"                                                          
+[152] "SARS coronavirus BJ01"                                                                                                    
+[153] "human papillomavirus 18 (Human papilloma virus type 18)"                                                                  
+[154] "Human adenovirus 2 (Adenovirus 2)"                                                                                        
+[155] "Saccharomyces cerevisiae (baker's yeast)"                                                                                 
+[156] "Shigella dysenteriae serotype 1"                                                                                          
+[157] "Pseudomonas aeruginosa"                                                                                                   
+[158] "Influenza A virus (A/chicken/Anhui/1/1998(H9N2)) (Influenza A virus (A/Chicken/Anhui/1/98(H9N2)))"                        
+[159] "Influenza A virus (A/bar-headed goose/Qinghai/3/2005(H5N1)) (Influenza A virus (A/bar headed goose/Qinghai/3/2005(H5N1)))"
+[160] "Influenza A virus (A/Canterbury/236/2005(H3N2))"                                                                          
+[161] "Bacteroides fragilis"                                                                                                     
+[162] "Enterocloster asparagiformis"                                                                                             
+[163] "HIV-1 M:B_ARV2/SF2 (Human immunodeficiency virus type 1 (ARV2/SF2 ISOLATE))"                                              
+[164] "Pseudomonas fluorescens"                                                                                                  
+[165] "HTLV-1"                                                                                                                   
+[166] "InfluenzaA"                                                                                                               
+[167] "EBV"                                                                                                                      
+[168] "HomoSapiens"                                                                                                              
+[169] "CMV"                                                                                                                      
+[170] "HIV-1"                                                                                                                    
+[171] "TriticumAestivum"                                                                                                         
+[172] "HCV"                                                                                                                      
+[173] "E.Coli"                                                                                                                   
+[174] "HHV"                                                                                                                      
+[175] "synthetic"                                                                                                                
+[176] "DENV1"                                                                                                                    
+[177] "DENV3/4"                                                                                                                  
+[178] "SelaginellaMoellendorffii"                                                                                                
+[179] "PseudomonasFluorescens"                                                                                                   
+[180] "PseudomonasAeruginosa"                                                                                                    
+[181] "SARS-CoV-2"                                                                                                               
+[182] "M.tuberculosis"                                                                                                           
+[183] "HIV1"                                                                                                                     
+[184] "Homo sapiens"                                                                                                             
+[185] "SaccharomycesCerevisiae"                                                                                                  
+[186] "HPV-16"                                                                                                                   
+[187] "HSV-2"                                                                                                                    
+[188] "HPV"                                                                                                                      
+[189] "StreptomycesKanamyceticus"                                                                                                
+[190] "YFV"                                                                                                                      
+[191] "HCoV-HKU1"                                                                                                                
+[192] "MCPyV"                                                                                                                    
+[193] "Wheat"                                                                                                                    
+[194] "DENV2"                                                                                                                    
+[195] "HIV"                                                                                                                      
+[196] "AdV"                                                                                                                      
+[197] "Homo sapiens (Human)"                                                                                                     
+[198] "Epstein-Barr virus (strain B95-8) (HHV-4) (Human herpesvirus 4)"                                                          
+[199] "Human immunodeficiency virus type 1 group M subtype B (isolate HXB2) (HIV-1)"                                             
+[200] "Influenza A virus (strain A/Puerto Rico/8/1934 H1N1)"                                                                     
+[201] "Hepatitis C virus genotype 1a (isolate H77) (HCV)"                                                                        
+[202] "Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)"                                                                   
+[203] "Human cytomegalovirus (strain AD169) (HHV-5) (Human herpesvirus 5)"                                                       
+[204] "Epstein-Barr virus (strain GD1) (HHV-4) (Human herpesvirus 4)"                                                            
+[205] "Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)"                                                    
+[206] "Mus musculus (Mouse)"                                                                                                     
+[207] "Human immunodeficiency virus type 1 group M subtype B (isolate BRU/LAI) (HIV-1)"                                          
+[208] "Human cytomegalovirus (strain Towne) (HHV-5) (Human herpesvirus 5)"                                                       
+[209] "Retroperitoneal fibromatosis-associated herpesvirus"                                                                      
+[210] "Human immunodeficiency virus 1"                                                                                           
+[211] "Human immunodeficiency virus type 1 group M subtype B (isolate NY5) (HIV-1)"                                              
+[212] "Triticum monococcum (Einkorn wheat) (Crithodium monococcum)"                                                              
+[213] "Yellow fever virus (strain 17D vaccine) (YFV)"                                                                            
+[214] "Yellow fever virus (isolate Peru/1899/1981) (YFV)"                                                                        
+[215] "Human papillomavirus type 16"                                                                                             
+[216] "Human T-cell leukemia virus 1 (isolate Zaire EL subtype B) (HTLV-1)"                                                      
+[217] "Human cytomegalovirus (strain Merlin) (HHV-5) (Human herpesvirus 5)"                                                      
+[218] "Human T-cell leukemia virus 1 (isolate Caribbea HS-35 subtype A) (HTLV-1)"                                                
+[219] "Merkel cell polyomavirus"                                                                                                 
+[220] "Human T-cell leukemia virus 1 (strain Japan ATK-1 subtype A) (HTLV-1)"                                                    
+[221] "Hepatitis E virus genotype 1 (isolate Human/China/HeBei/1987) (HEV)"                                                      
+[222] "Human adenovirus C serotype 2 (HAdV-2) (Human adenovirus 2)"                                                              
+                                                                          epitope.organism
+  1:                                                                     Influenza A virus
+  2:        Influenza A virus (A/nt/60/1968(H3N2)) (Influenza A virus (A/NT/60/68/(H3N2)))
+  3: Influenza A virus (A/Puerto Rico/8/1934(H1N1)) (Influenza A virus (A/PR 8/34 (H1N1)))
+  4:                                                        Columba livia (carrier pigeon)
+  5:                                                              Streptomyces hainanensis
+ ---                                                                                      
+218:             Human T-cell leukemia virus 1 (isolate Caribbea HS-35 subtype A) (HTLV-1)
+219:                                                              Merkel cell polyomavirus
+220:                 Human T-cell leukemia virus 1 (strain Japan ATK-1 subtype A) (HTLV-1)
+221:                   Hepatitis E virus genotype 1 (isolate Human/China/HeBei/1987) (HEV)
+222:                           Human adenovirus C serotype 2 (HAdV-2) (Human adenovirus 2)
+     V1
+  1:  1
+  2:  1
+  3:  1
+  4:  1
+  5:  1
+ ---   
+218:  1
+219:  1
+220:  1
+221:  1
+222:  1
+Homo sapiens (human)	iedb	4075
+HomoSapiens	vdjdb	4052
+Homo sapiens	vdjdb	   5
+Homo sapiens (Human)	mcpas	 827 
+NULL
+Mus musculus (mouse)	iedb	615
+Mus musculus (Mouse)	mcpas	 41 
+NULL
+Rattus norvegicus (brown rat)	iedb	4 
+NULL
+Saccharomyces cerevisiae (baker's yeast)	iedb	 2
+SaccharomycesCerevisiae	vdjdb	 1
+Saccharomyces cerevisiae (strain ATCC 204508 / S288c) (Baker's yeast)	mcpas	65 
+NULL
+Triticum aestivum (Canadian hard winter wheat)	iedb	668
+TriticumAestivum	vdjdb	 38
+Wheat	vdjdb	172
+Triticum monococcum (Einkorn wheat) (Crithodium monococcum)	mcpas	 17 
+NULL
+Selaginella moellendorffii	iedb	2
+SelaginellaMoellendorffii	vdjdb	1 
+NULL
+Human herpesvirus 1	iedb	40
+Human herpesvirus 2	iedb	59
+HSV-2	vdjdb	79 
+NULL
+Human herpesvirus 3 (Varicella-zoster virus)	iedb	2 
+NULL
+Human herpesvirus 4 (Epstein Barr virus)	iedb	50773
+Human herpesvirus 4 strain B95-8 (Epstein-Barr virus (strain B95-8))	iedb	    2
+EBV	vdjdb	 6591
+Epstein-Barr virus (strain B95-8) (HHV-4) (Human herpesvirus 4)	mcpas	 1299
+Epstein-Barr virus (strain GD1) (HHV-4) (Human herpesvirus 4)	mcpas	   61 
+NULL
+Human herpesvirus 5 (Human cytomegalovirus)	iedb	26115
+Human herpesvirus 5 strain AD169 (Human cytomegalovirus (strain AD169))	iedb	  313
+CMV	vdjdb	23327
+Human cytomegalovirus (strain AD169) (HHV-5) (Human herpesvirus 5)	mcpas	 1648
+Human cytomegalovirus (strain Towne) (HHV-5) (Human herpesvirus 5)	mcpas	  480
+Human cytomegalovirus (strain Merlin) (HHV-5) (Human herpesvirus 5)	mcpas	  266 
+NULL
+Murid betaherpesvirus 1 (Mouse cytomegalovirus 1)	iedb	799
+Retroperitoneal fibromatosis-associated herpesvirus	mcpas	 31 
+NULL
+Influenza A virus	iedb	19990
+Influenza A virus (A/nt/60/1968(H3N2)) (Influenza A virus (A/NT/60/68/(H3N2)))	iedb	   10
+Influenza A virus (A/Puerto Rico/8/1934(H1N1)) (Influenza A virus (A/PR 8/34 (H1N1)))	iedb	  863
+Influenza A virus (A/Puerto Rico/8/34/Mount Sinai(H1N1)) (Influenza A virus (A/Puerto Rico/8/1934(mt sinai)(H1N1)))	iedb	   60
+Influenza A virus (A/Japan/305/1957(H2N2)) (Influenza A virus (A/Japan/305/57(H2N2)))	iedb	    1
+H1N1 subtype (H1N1)	iedb	   36
+Influenza A virus (A/bar-headed goose/Qinghai/1-HVRI/2006(H5N1))	iedb	    1
+Influenza A virus (A/California/04/2009(H1N1))	iedb	    1
+Influenza A virus (A/California/07/2009(H1N1))	iedb	  249
+Influenza A virus (A/Memphis/4/1973(H3N2)) (Influenza A virus (A/Memphis/4/73(H3N2)))	iedb	   45
+Influenza A virus (A/chicken/Anhui/1/1998(H9N2)) (Influenza A virus (A/Chicken/Anhui/1/98(H9N2)))	iedb	    2
+Influenza A virus (A/bar-headed goose/Qinghai/3/2005(H5N1)) (Influenza A virus (A/bar headed goose/Qinghai/3/2005(H5N1)))	iedb	    1
+Influenza A virus (A/Canterbury/236/2005(H3N2))	iedb	    1
+InfluenzaA	vdjdb	 9393
+Influenza A virus (strain A/Puerto Rico/8/1934 H1N1)	mcpas	 3954 
+NULL
+Influenza B virus (Influenza virus type B)	iedb	11 
+NULL
+Human respiratory syncytial virus A2 (Human respiratory syncytial virus (strain A2))	iedb	65
+Human respiratory syncytial virus	iedb	62 
+NULL
+Middle East respiratory syndrome-related coronavirus (MERS coronavirus)	iedb	15 
+NULL
+SARS-CoV1	iedb	41
+SARS coronavirus Urbani (SARS coronavirus strain Urbani)	iedb	 2
+SARS coronavirus BJ01	iedb	 4 
+NULL
+SARS-CoV2	iedb	10418
+Severe acute respiratory syndrome coronavirus 2 Wuhan/Hu-1/2019	iedb	    6
+SARS-CoV-2	vdjdb	 6187 
+NULL
+Human coronavirus NL63 (Coronavirus NL63)	iedb	33
+Human coronavirus 229E (Coronavirus 229E)	iedb	25
+Human coronavirus HKU1 (CoV-HKU1)	iedb	10
+NL63-related bat coronavirus	iedb	 9
+Human coronavirus HKU1 (isolate N1)	iedb	 4
+Human coronavirus OC43 (Human coronavirus (strain OC43))	iedb	98
+HCoV-HKU1	vdjdb	33 
+NULL
+Chaerephon bat coronavirus/Kenya/KY22/2006 (Bat coronavirus BtKY22/Chaerephon sp./Kenya/2006)	iedb	22
+NL63-related bat coronavirus	iedb	 9
+SARS coronavirus Tor2 (Severe acute respiratory syndrome-related coronavirus Tor2)	iedb	64 
+NULL
+Dengue virus	iedb	  1
+dengue virus type 1 (dengue type 1 D1 virus)	iedb	  6
+dengue virus type 2 (Dengue Virus serotype 2)	iedb	  7
+dengue virus type 3 (Dengue virus serotype 3)	iedb	 10
+DENV1	vdjdb	173
+DENV3/4	vdjdb	170
+DENV2	vdjdb	 60 
+NULL
+Yellow fever virus (Flavivirus febricis)	iedb	2391
+YFV	vdjdb	 532
+Yellow fever virus (strain 17D vaccine) (YFV)	mcpas	 249
+Yellow fever virus (isolate Peru/1899/1981) (YFV)	mcpas	  53 
+NULL
+Hepatitis B virus (Human hepatitis B virus)	iedb	4558 
+NULL
+Hepatitis C virus	iedb	 458
+Hepatitis C virus subtype 3a (Hepatitis C virus 3a)	iedb	   2
+Hepatitis C virus (isolate BK)	iedb	   3
+HCV	vdjdb	1551
+Hepatitis C virus genotype 1a (isolate H77) (HCV)	mcpas	  95 
+NULL
+Hepatitis E virus type 3 (Hepatitis E virus genotype 3)	iedb	1
+Hepatitis E virus genotype 1 (isolate Human/China/HeBei/1987) (HEV)	mcpas	5 
+NULL
+Human T-cell leukemia virus type I (Human T cell leukemia virus type 1)	iedb	378
+HTLV-1	vdjdb	182
+Human T-cell leukemia virus 1 (isolate Zaire EL subtype B) (HTLV-1)	mcpas	  7
+Human T-cell leukemia virus 1 (isolate Caribbea HS-35 subtype A) (HTLV-1)	mcpas	 17
+Human T-cell leukemia virus 1 (strain Japan ATK-1 subtype A) (HTLV-1)	mcpas	193 
+NULL
+Human immunodeficiency virus 1 (human immunodeficiency virus 1 HIV-1)	iedb	 441
+HIV-1 M:B_HXB2R (Human immunodeficiency virus type 1 (HXB2 ISOLATE))	iedb	 143
+HIV-1 M:B_ARV2/SF2 (Human immunodeficiency virus type 1 (ARV2/SF2 ISOLATE))	iedb	   4
+HIV-1	vdjdb	3234
+HIV1	vdjdb	   2
+HIV	vdjdb	 161
+Human immunodeficiency virus type 1 group M subtype B (isolate HXB2) (HIV-1)	mcpas	 966
+Human immunodeficiency virus type 1 group M subtype B (isolate BRU/LAI) (HIV-1)	mcpas	 157
+Human immunodeficiency virus 1	mcpas	   9
+Human immunodeficiency virus type 1 group M subtype B (isolate NY5) (HIV-1)	mcpas	  35 
+NULL
+Human papillomavirus type 16 (Human papilloma virus type 16)	iedb	45
+human papillomavirus 18 (Human papilloma virus type 18)	iedb	37
+HPV-16	vdjdb	 2
+HPV	vdjdb	14
+Human papillomavirus type 16	mcpas	 1 
+NULL
+Merkel cell polyomavirus (MCPyV isolate R17b)	iedb	 18
+MCPyV	vdjdb	  6
+Merkel cell polyomavirus	mcpas	477 
+NULL
+Mycobacterium tuberculosis	iedb	187
+Mycobacterium tuberculosis variant bovis BCG	iedb	  1
+Mycobacterium tuberculosis H37Rv (Mycobacterium tuberculosis str. H37Rv)	iedb	  4
+M.tuberculosis	vdjdb	 34
+Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv)	mcpas	 39 
+NULL
+Escherichia coli	iedb	34
+E.Coli	vdjdb	 2 
+NULL
+Salmonella enterica subsp. enterica serovar Typhimurium	iedb	13
+Salmonella enterica subsp. salamae	iedb	 1
+Salmonella enterica subsp. enterica serovar Typhi str. 404ty (Salmonella enterica subsp. enterica serovar Typhi 404ty)	iedb	 1
+Salmonella enterica subsp. houtenae	iedb	 1
+Salmonella enterica subsp. enterica serovar Indiana	iedb	 1
+Salmonella enterica subsp. enterica serovar Typhi	iedb	11 
+NULL
+Pseudomonas aeruginosa	iedb	3
+PseudomonasAeruginosa	vdjdb	1 
+NULL
+Pseudomonas fluorescens	iedb	1
+PseudomonasFluorescens	vdjdb	1 
+NULL
+Akkermansia muciniphila ATCC BAA-835 (Akkermansia muciniphila str. ATCC BAA-835)	iedb	 7
+Akkermansia muciniphila	iedb	10 
+NULL
+[1] 1
+[1] 1
+[1] TRUE TRUE
+pdf 
+  2 
+
+
+R version 3.6.1 (2019-07-05)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Rocky Linux 8.6 (Green Obsidian)
+
+Matrix products: default
+BLAS:   /root/hpc-apps/R/3.6.1/lib64/R/lib/libRblas.so
+LAPACK: /root/hpc-apps/R/3.6.1/lib64/R/lib/libRlapack.so
+
+locale:
+[1] en_US.UTF-8
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] UpSetR_1.4.0        VennDiagram_1.7.3   futile.logger_1.4.3
+[4] ggplot2_3.4.2       stringr_1.5.0       tidyr_1.3.0        
+[7] data.table_1.14.8  
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.10          magrittr_2.0.3       tidyselect_1.2.0    
+ [4] munsell_0.5.0        colorspace_2.1-0     R6_2.5.1            
+ [7] rlang_1.1.0          fansi_1.0.4          plyr_1.8.8          
+[10] dplyr_1.1.1          tools_3.6.1          gtable_0.3.3        
+[13] utf8_1.2.3           cli_3.6.1            lambda.r_1.2.4      
+[16] withr_2.5.0          tibble_3.2.1         lifecycle_1.0.3     
+[19] gridExtra_2.3        farver_2.1.1         formatR_1.14        
+[22] purrr_1.0.1          futile.options_1.0.1 vctrs_0.6.1         
+[25] glue_1.6.2           labeling_0.4.2       stringi_1.7.12      
+[28] compiler_3.6.1       pillar_1.9.0         generics_0.1.3      
+[31] scales_1.2.1         pkgconfig_2.0.3     
+PROGRAM FINISHED!
+

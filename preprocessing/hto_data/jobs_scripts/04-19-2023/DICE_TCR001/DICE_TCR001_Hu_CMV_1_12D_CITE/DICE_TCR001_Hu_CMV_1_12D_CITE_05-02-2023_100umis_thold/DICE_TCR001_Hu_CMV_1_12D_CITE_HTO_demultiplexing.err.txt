@@ -1,0 +1,92 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+'as(<dgTMatrix>, "dgCMatrix")' is deprecated.
+Use 'as(., "CsparseMatrix")' instead.
+See help("Deprecated") and help("Matrix-deprecated").
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+Normalizing across features
+Iteration 1
+Using quantile 0.65
+Iteration 2
+Using quantile 0.65
+Warning message:
+In dir.create(gen.reports.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/general_reports' already exists
+Warning messages:
+1: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag01' already exists
+2: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag02' already exists
+3: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag03' already exists
+4: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag04' already exists
+5: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag05' already exists
+6: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag06' already exists
+7: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag07' already exists
+8: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag08' already exists
+9: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag09' already exists
+10: In dir.create(tmp.counts.per.ids.path) :
+  '/root/bioadhoc-temp/Groups/vd-vijay/vfajardo/R24/deconvolution/HTO_based/04-19-2023/DICE_TCR001/DICE_TCR001_Hu_CMV_1_12D_CITE/DICE_TCR001_Hu_CMV_1_12D_CITE_05-02-2023_100umis_thold/HTOs_across_IDs/Hashtag10' already exists
+Centering and scaling data matrix
+  |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in irlba(A = t(x = object), nv = npcs, ...) :
+  did not converge--results might be invalid!; try increasing work or maxit
+PC_ 1 
+Positive:  Hashtag10, CD45-2D1, Hashtag09, CD45-HI30, Hashtag05, Hashtag08 
+Negative:  Hashtag06, Hashtag01, Hashtag04, Hashtag02, Hashtag03, Hashtag07 
+PC_ 2 
+Positive:  Hashtag04, Hashtag02, Hashtag03, Hashtag01, CD45-HI30, CD45-2D1 
+Negative:  Hashtag07, Hashtag08, Hashtag06, Hashtag05, Hashtag09, Hashtag10 
+PC_ 3 
+Positive:  Hashtag01, Hashtag06, Hashtag10, CD45-2D1, Hashtag02, Hashtag09 
+Negative:  Hashtag04, Hashtag07, Hashtag08, CD45-HI30, Hashtag05, Hashtag03 
+PC_ 4 
+Positive:  CD45-HI30, Hashtag01, Hashtag06, CD45-2D1, Hashtag09, Hashtag05 
+Negative:  Hashtag10, Hashtag04, Hashtag08, Hashtag02, Hashtag03, Hashtag07 
+PC_ 5 
+Positive:  Hashtag03, Hashtag09, Hashtag02, CD45-2D1, Hashtag05, Hashtag08 
+Negative:  Hashtag01, Hashtag10, Hashtag06, Hashtag04, Hashtag07, CD45-HI30 
+Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric
+To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'
+This message will be shown once per session
+11:29:35 UMAP embedding parameters a = 0.9922 b = 1.112
+11:29:35 Read 18538 rows and found 12 numeric columns
+11:29:35 Using Annoy for neighbor search, n_neighbors = 30
+11:29:35 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+11:29:37 Writing NN index file to temp file /scratch/RtmpcvL8yO/file362a40bc416c0
+11:29:37 Searching Annoy index using 1 thread, search_k = 3000
+11:29:43 Annoy recall = 100%
+11:29:43 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30
+11:29:44 Initializing from normalized Laplacian + noise (using irlba)
+11:29:46 Commencing optimization for 200 epochs, with 736420 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+11:29:52 Optimization finished
+Warning messages:
+1: Requested number is larger than the number of available items (12). Setting to 12. 
+2: Requested number is larger than the number of available items (12). Setting to 12. 
+3: Requested number is larger than the number of available items (12). Setting to 12. 
+4: Requested number is larger than the number of available items (12). Setting to 12. 
+5: Requested number is larger than the number of available items (12). Setting to 12. 
